@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Site For Marathon</title>
-      <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iframe-container {
+            width: 100vw;
+        }
+
+        iframe {
+            width: 100vw;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe[title="YouTube video player"] {
+            height: 80vh;
+        }
+
+        iframe[title="weather-widget"] {
+            height: 40vh;
+        }
+    </style>
 </head>
 <body>
-    <div class="iframe-container">
-    <iframe src="https://www.youtube.com/embed/yLGfPNhtS2U?si=t0_rwCvjYtxkgwsz&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/yLGfPNhtS2U?controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="iframe-container">
-    <iframe title="weather-widget" src="https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_2643743?geoloc=fixed&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&days=7&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light&user_key=c1f59f91cd4495da&embed_key=14b46473a48a2f6b&sig=24dd4845f716f9ac403e01e9aa0d85c300c2fd87a1f6e22d7a28770c6bf84b71" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" ></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/index" target="_blank" rel="noopener">meteoblue</a>
+    <iframe title="weather-widget" src="https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_2643743?geoloc=fixed&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&days=7&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light&user_key=c1f59f91cd4495da&embed_key=14b46473a48a2f6b&sig=24dd4845f716f9ac403e01e9aa0d85c300c2fd87a1f6e22d7a28770c6bf84b71" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/index" target="_blank" rel="noopener">meteoblue</a>
 </div>
 
 <div class="distance-container">
-  <h2>
-    Running Distances
-  </h2>
-  <ul class="distance">
-    
-    <li>
-      <h3>1km: Fun Run</h3>
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA8QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA+EAACAQMDAgUCAwUGBQUBAAABAgMABBESITEFQQYTIlFhcYEUMqEjQlKRsRVTksHR8AckM1RiJWNyovEW/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACURAAICAQQCAgIDAAAAAAAAAAABAhEDEhMhMQRBIlEFcRQjMv/aAAwDAQACEQMRAD8A9nB1cU9ec9J8bxwYinDYzyTmtqx8a2NxM6SMUCjYt3rhWeL7Op436OspxXIr40svxYiLbHg4rck6zZRwCZp1C4zjNUskWQ4M0S4XmkGB3Fcxc+JrSUAQyBgxxtUY/E9tECWfUFHqx2pb0Uytp0dXTFt64qT/AIhdOVTiOQn2xvWRe+MZrsrLbOYT7HFDzJCWNs9NzSPFeZ2njWW1UmYmY961um+OYbxyJIjGo7nvQs0WPaZ2XmgDeqE/UkjmVC35q5q68R200ssqTE6F9IHvXJXfiaaUiNt8NnVUSyN9FRxpdnenq6wdSdXfK42rVg6rDKwAcY5NeQ3PU2mZGR+Ksr1W4QZ18jFZqckaOMWeqxdXgkuDEJN6ui4XGdQx714zFfTRepJWH3rTsfE1zbqqAkgn1ZNXvNEvEn0epLdxsDhxtUPx8auAzZrzV/EjtLJuQhGwHvTRdaeXQzTEMoo32Gyj1SOVXUMvBqQO1cZZ+Io/wgUygsBWz07qYuowyMG98dq1jnXszeFo26VVUuhpzqGR80SO4DbEjP1rXXFmbgw1Ko6h70+c1Vkj01LFOKAEOKVMaVIBU1KlSGKlSpUAfOESu4Pr9Xao/iZIJDqYk0aS0aNtaHOfatBekLcIJnbDYrhUlfJ1KJjzXrKyvnftvUx1OV9nkcj21VtN4YFxEpWUADeqEvhueNiQ+R2qrgDhIrR3MoY6WIXtvVy2mkOwY/O9VZLGeBCWHFKzMi5LKw+1JxTGrXYa63kPbFDZsp6SR96FdT4ZmOcVRFwSSM9qNJDdMvCZ41xqyPY0RLtkHpas5XyPVTM2k7ZqlH7HZoC7kTVhj6vmoGYZqgJc+9TV81TiFl5ZiCKMbolSM/Ss0vg1MPnapodmjHc52Y7DfnFWbGS7kxGsccRbKhtDBjnjDHIrP6YGe8iCvEh3IMn5c42z9/6V1fSp7lruwW86hYvbyDTcR6SdeewqvikVCLbOVn6vLZdUk6Z1VVXDYW4RQMg8EitGZJYAA42bdTnZh7iuY8cRyS+I7gRSrN+HiVXI50gnGfcgEZq94Q6lNM39kXh80Y/ZLIcFduzUsmNadSGuZUbUNwwX0titCx61d2JfynyWHFYDEpM6nUCrEYPIqQmYNtxXP+g/Z01v4ivgH1Nkk5osPXbxZRJ55+lcwLk/lJFHhkHcmrEej9C69M8mJ3JVhsTXU294rrnUK8ei6g6KFQ4ArdsesOIiTL296uORolwTPSTdxDGZFGeKZ7lF/eFeYP1WWWYHziMcVfi8RmOJllYO2nY+9XvE7SPQ45ldQwbINMZk1Y1DNefReLhDakSKVbsTxVG68VTylZISAfg80t9C2j0DrF+LVFIcAmodO6qs2FZh8nNee9Q60erLBhSkqKQTmqa3ksBI8xlYjeoeZ3Zagqo9e/FQ/wB4tKvIv7Rn/wC4elR/JFsoyUj3I42qPmzpjBJGa1bW1inuNIfbk1ZmsIFh0xsNWa5G2a6H6MlLuRE3Y7n3o8XUHxjAP1pXNgIiDrDCq2gA4UUuR8o04pkmIWRVx7Vd/D2zKV0LXP5eJgw3NaNrcnSWcYqlJjTRR69a2kdu4wA/IFcdkA50kA12vU4op3157d65C+lXzWVcYFdOPkxyLkgr42xUhuOarM4GMd6WskYFb6TNMMRgmkjZNCMhC4PIp0OBk1VBYYvkAe1MZMED9aHkH8tTtGEV3HIyawDnB4zRGFtImc9EdRfsopJMOPSi7hz3+nvWzFcRQPGrQgIml42Dd/gY5+9UYVuZ8OxAQnPc/wC/5VoWnT/x5EazYKLkAnGT9q9Gf4/HpTb49nj4vzGXXKKjbfRnXFlH1C68+dRHM2CoUknWDz9xsQfetDpPQoLX8Pcy4TyZAuteME4AO/Y43qveRv06V1nLCRMalbY/HFXOp3s1x4caSP8A61uQJCoxribY5HuDp/2Ky8vwf69WJmvg/lsm7ozrv31yZfUbkS30z7fmxVcyAjY1RaTOCTvTJIc/FeXHHR7Llbs0ol15Odx+tEEpQ4NAglGMr7VKbDR5U7ilQyys/wBadLlgCA2BWYszaTk0yzHOBT0hZrrOcfm+9EafYHVuKyfPwBim848HvSceAs2JZPOUK7bU0QWDKqcr7VnxyE/aiG4zsaw0MdmjFcqhxn0DhjyKU90D6gdQxt81lm4UHbGD2oLXC6WwSD7VSgGo1PxbfwU9Yv4g+5p6vbJ1nbZ1LqVPLbHaoQEEYYnJPNWGv+n/AMZqu99Y59I29yKx0y+zZyE8QPDbUo7UMcFsAVWm6vaIcRpq+aGvW7cN6kwPmimLUg9x05s60bIpLmNCki5oT9chI2XbNIdVhkz6P0o0sVxKlyjSOQdQVq5vqdp5MxJOxrqZOqQqRrT0jtXOdSuUvbjChgPpW2LUmROmUdEQAIOW7UxdRt3oxihVBoOWB3qtIuTsu9dMWYjyAEau9RLHRzUkY4IYUzDbFV0IeLmisCSBGcsTx81KKEBASa1+ky2kMMwlKB29JcgZ0kcA9u/FNNJpj06k0Te7CoijGyjbPxQv7bls3CxKrxD91gD/ACoELR3EeNGNOVBUZJAJwfrjFVntyAdJJ32Hevemt2FP2fKYm/HzNxfKOi6t1np/iSzRSXhuoo8LKRz8H3+tVZuoHosRtrwK1rd+WPMaLIdMjIB4BxkGuftLO7M0nlISmCdWOduD7VsWnUDbWv4O8mjMYzqgdS2Qdvb/AHiuaOmEHjs68rlLJvNe/RmdRhWy6jc2v7kchCf/AB5X9CKjBCzDV+7Wr1i1/E3ts5KajAgkKnO42BPyRig3URt1SCME6jnNePJpOj6GHKTHs18tAG7nj3prl1XITJPzWlbWvnPHgdqHfdOZNZzvWfDZtXBgPLp1e3tQ45zknG1Ha2wGLsOapsGWTA4rRJGTsO0urAXY0VZgcfFBCHQZNOwFSkjBRGj9ORxSYcluNzodlO9Tt5PMDZHAqpal4x698irMT6H40559qlr0Wgj2+R5gYhvbtVaQlAFParssysAoPG9VSVdiXFNRG0gGse5/lSo+IqaqoVGoNuBnNSyFOWAxW1P4TuEx+GmV9/3qrv4d6mhz5SOB2DVx7YzHbyiMjnNRkSN1wSKuzdKu4mzJaOPpQvwx3DROpHuKl8E0ykXWNcDtU450zkx5P0ouY+8e3vijRNGyDCgfanuaQAvOrx/9OqwC/l8s/wAq0wyqQPTg/FPrik2BUH6VSzDplCK0TSxxzQJLXSVEalvnHFa+8Y3w30oJeTJBTA96redicTN/s6RkO4BzQX6bOMA5PfaukgdFjAYA574qYCYPFT/If0PQc+lrIAoIP8qmOmSyS6gPSfmt9I485ZM/SpGXygW8rCKMk+wprPN9IWg5+Yx285ASaMKdwgBA/WoG/Wb0LEzfpWRdzyNdyTpIVZ2J2pW/UpopAzKrKDkr2P8AKvoYeVUeT57J+Obl8eTsvDNrdS3DS22Y3iUuEJLawBup+CKjddNaY58lCpyyrjOnvRfC3iq5l6hb9PSG3tredtLiJd2HsWO9bUoaC68mNEbB05ryfPyuWRNHreF4u1jqRyskc5iGpcHPNEt48MHkyzY2Ndi3QVZtTTqMjOD2pz0OJoyWnjB964Pk+Tt0nN28zQRlQRk8bVNwJlOvfJ3xWuPD+v8AJeRD7ZqE/hS7Kfsb2FfnFUtYHM39kJWAiOnHFUF6OTceo/eu3/8A567IUm4hbA47mqVz054mz50Zb2B3q1KaHSOaeyWAmN2JWpiztyowTtwK6Kbp5aAzSAennaqr20bxl4iAfalLI0FfRkTWCFkdAARzmq1xbOw1hds4IrVZQyEahleTVKeXyc+onSePeqWQXRkyxtGMHYjtTEld1GQR2rYv5IJIlcAav61QEkaI0eO+xrWM7ViKXmU9T2+KVVqJs9px8Ut/ehCUnvTh81FGoTb95Q1BntYZwQ6Lg/FTzSJ+aTin2FmTJ4etiD5bac/FZsnhmRNflmOQnjO2K6Y57cU2fmoeKLCzjj4fvEGGiBI9jTxWVpCCbyK4DKf3RXX596i4XgjY81O0I5xf7L0N+wkYgbamxWfcXEXmRiKywudyTnNdJd9IsrlCxTS/8SnFUoeiPC6sk+oDjIocZLoKM6eTSUxYTFRv6UO9aqXPTmthLLYSxsOzqRk1ZafqFvga1kUcDiqF71K9ZX8y1z3AznFLTXI6Ktx1hWIigtVTJxsM0brN3o8PXMP4fSTHsSRntWfqlfLOBGrbnI4qressgZHkMgYEZzxTxtRabIl0cjoDkjvVeeJopArjkZB96P6o5mU8g4qz1a2MnRhdop/YOAT9a9Ns5UgPS52t7uKZPzxsHX7Gu563csnUfOjLL5iK5A+RXCdBUTdRtom/fkVd/k12nXJz/ak8aQnTGRGG+g//AGuTyadI3x9DN1e5VR/zDDPahDqt3IGXWzAe9RCsAGkXPtmk80QA1Lg/Fc1IsaG8nVjI8j4HYU0nWLvzNQkuMHtR7TTdMwaQKnAGMU1zaCMkZ1Y5xVKKQUUZOsXyHCmUgd871T/HzmTWS6sTk5NX2YociPIqvIBI3qjIz2C1TQqZJuqXLLvK/HGdqAL24JO5x8VNrWYf9OJs+2KeO1nOdS6SB7VDjYclTz5RnDEE8/NBmkkcZbkVo/gJc7437ilJ04AjOrYbnFXGNMWlsz47olcSDK9lAp4ghdtaEAbgk1fFosY1nAA4wKDPAJMHBwDnArW0OvsHmH/xpUvwo/gNNTtAeph/apB//Kg4KA498b02W7qKRZYDt77UtZoPmHSRxjepL6t80CJtIRwafUQM4pvLB705jzuW54oAYOdiRyaYtmnMewBycU5X2oAhg4xmo4kB52qZ2G9OdIHFAgbMxIyuai2jnyx9xROO2c0jj2pDBNbwTKyvFnNZs3QbaQ5RmT4rYHHOKWKlxQHn3WekdOsOqaOoz3McVyoaKeJQwRxyGXkjjirFx0WaPwl1UpJFdWbQiSO5gbK5Ug4PscZrX8dWa3HRGmABa2IcH44Ncz4UudC9St5pH/DzdPnE6KfzroP2zXXHmCMGqlwZPg+LzPEFirEBRIHb6KNR/QGuqmuJJoZJdCNK7liSeM78VDwBFaNfXE1hZuIkiKPNcOGcltsDGw5OTzXWSdNs3YkxDJ7gYrmzpyfBpBfE5FfM050lvpvUHJyNUeMc11D9Cth+UN6udzVefpGldEcJde/q4rncWVRz6LliwTgbEZ2pGQa8KX19z71tnpaxKP2LZxxnahNZ4kJjjVQO55pcjoyhK+CAC/ufaoy3QYbAbdxWreRNBFrWNVJG7ImapR2xnTS0UbY3yTpOPpQ2FFJ7yRCvlszE99VTWa7mDYYgd8kDerL2cAwWhOfZOKdIATgKQMYAbakpchQFHuBjSCfuKLc/ikSJ5VA8xcqFOdvmptalMuz4X3Boa3OhmijkDMBnFPUHQAs2sIYmJPA01EyAPpKhcfFasU0qKHZ2Ud8MN6zyI5bqQmKNi37xlOT9qVsGrB60p6vfgbb+5f8AxGlTthoZ2DhVYHhu6jg03JyuPmiwuWQB/tTvFG41Kh9Wx54rdMpoqY0533PZjTFioyy47Z7fajiLSdIIYnvUWTfSwG/xmqsVEPUuMEnbcE8VISNg6jg570hGmcMPSf5fyp206twPimKhGU5O9R8x1IJz7cUTGOBv7Ci6cbA8igVAtLOMmm0P+8KIUxwD89qSDC5xzSGRw/sMfNN+YKfiibb5/rTAD2GPpQBDQBuTTY9jtRtJI/iH0pjqyujbagZieKT5fh692BymAD8muH6Iuiw6vck7ralQfYMwB/Su88Xo0nhy90ncKGx9CK4/wzAZLS7tpnEBuEKLq/NkjbbnnFbRfwMZL5E/+HNy46jcWoAEToZGI+o/1r0HORjc+xrh/wDhjD5i3l/5YRSqIrDYZ5P+Vd2OTq3qJ/6Lh0QBJ2znFIqFIOKKMHZSPpTYGdvpWZYgQdiBvUHi17YGPY8VNsMApUgg749qgoRjyQfak1YAjZwnI0K322FVm6ZAMPHGqydjWjyDuT8VFggDEhQV4Y8CpcUMyLjpsrL+xmIBO/pzQhbXCNu0QGcYCYOK3GBwT3x6sCpKBgEooGNhioeNMdnOyWEU7gSIqlTk7b0Cbp1pEqyxo5YexyRXRvbIfUAR7kHNV57bTIoKjfnTuSOwqHjaDg5W4lHlaFt4ZSMFQz7rRY/MSL9nZwNIdzjSdNbMnT30DV5YU8gruKzjDdwXISG0lkjYYyukfXcnelUhUB/9T/8Ac/wUq0/wj/8AYyf40/1pVNMqgVp1KaEJD5a6cjLajkV0ccqvGpRxp33rhoLiVGALDb0hShJ/pWhaXkkZXDMR/CRt/SohllB0yuGdTN5jKPLbG3GcUipKrqOVA3x2qvY30V2NKlfMH5sA7VaO+389q7IyUlaM2qK7yYbQTg9geKcK+BwPpRWVGPqXIPHagSRsMEMBjgb71aEE0YGQcGoxH1Hc+/1pFmUAerHtgEUy5wWGGBGrI7Z3/pTAmT6sAHf3qRbSuTUWdXGMB8cEHOTU9S7YBbP6frQIQYFQV4+Kcj3zUcKGzxnYb96kA5/MOBzmkA4ZV5/rUcAkf60sg+nk/SmwMbD/ACBoAa6txc20lu2NEqMjfcYzXARWxi8UzokSo0yrMkaj8p04YfZgwr0AgEdvjFcn4h/5Pr1lfEokA/ZvIzHDa/t9ePfNa432jPJ2mXvB3TZ+l+GbWG4iMc7AvIjYyM8Z+1bce+VPOayvCxKdNaCSZp5YZnjeVjqLYOxz8jFawPOcYI7Dg1EnzyXFUiWAqliBnONzUWZmI/Zj61FnYkYDKvGeaksqNhtRK8ZONqkoctn09jyewqSMcrlc6dsYxmo+n1epgMbnFRV9hpLb/amARiCVZWA7fWokkNuuc7bc1DXkeonKnkcGn8zDMSDkjgUqAnwR6NI4Oo80g+k+nAz2xtUPOGknWc47cj4pzqbBwpTkknDUUFjkn0iQDUDswO360iSrFcAk99PPtTIWYlVO+MgnenXUQCdOrggn/e9FBZFMg4xufY0zpokI/McDUOKmTk4VsHO496YFlBGcr2AHI/ypUOxaD/B/9hSp9a/3bfpSooLOHtPWWU9mP9ambloygVEw2M7H5pUq8tlxL8JwokUANzttvW9092ltomc5LPpJpUq28Vuxy6CazpzgZ37cbkf5UtWQfgU9Ku8yBMT+JdM+nSNv5f61KM+WJgv7j6Rn22FNSoETC6ZAVJGojIHFOxxdeUuwz+Yc0qVMBNgRg4B9WcGmt383WWUAqdsbe9KlSAeN9a7qowe1Eb8x+NxjtmlSoAIqAxaskfFct4xtIrq7sIZgTHHqkC52JAHNKlVx7Jl0XvDug9OaZI1jLOchM44x3+grVbYqAcagSf5UqVQUMGwD6Rzj6VBwFRmA/KCce9KlQAOwuGurVJpETUx3xnFaCRRnSCowQdqVKmDIKijgYxn+tS0I5wyLjHGKVKmIJLGi6SFHAPHzTtBHoVsbmlSoAGm5P0NTMKFiMd8U1KgAZhjDadOwqE0ahCd+BSpUhlfSPb9TSpUqAP/Z" alt="Running image">
-      <p>This short and sweet 1km run is perfect for beginners or those who just want to have a bit of fun. Whether you're looking to kickstart your fitness journey or simply enjoy a leisurely jog in the great outdoors, this distance is a great way to get started.</p>
-    </li>
-
-    <li>
-      <h3>5km Run</h3>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfp51wbvRyBSH0uMUbDnUJqKNCYhDqh-4lg&s" alt="5km race">
-      <p>With a distance of 5km, this run is a great challenge for beginner runners or those who want to improve their fitness. Whether you're looking to increase your speed or endurance, this distance will test your limits and help you reach your goals.</p>
-    </li>
-
-    <li>
-      <h3>10km Run</h3>
-      <img src="https://lh3.googleusercontent.com/1-czAJZE0TVdJFJzVo5Mh4ktqpRmMS3vTAnmZv_H3AM9A7oKhhNdI7FDxCAHI1AGryjYwaEmr1ru1-Lm-EuswQ" alt="10km race">
-      <p>The 10km run is a great intermediate distance that offers a challenge to runners who have already tackled shorter races. With a mix of speed and endurance, this distance requires a bit more training and dedication, but the sense of accomplishment you'll feel at the finish line will be well worth it.</p>
-    </li>
-
-    <li>
-      <h3>Half Marathon</h3>
-      <img src="https://hips.hearstapps.com/hmg-prod/images/runner-s-world-magazine-photos-4-687e4c168fdc8.jpg?crop=1.00xw:0.505xh;0,0.428xh&resize=1200:*" alt="Half marathon">
-      <p>The half marathon is a major milestone for runners and requires dedicated training to complete. At a distance of 21km, this run will push you to your limits both physically and mentally, but the feeling of crossing the finish line is an experience like no other.</p>
-    </li>
-
-    <li>
-      <h3>Full Marathon</h3>
-      <img src="https://images.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/10/23/Pictures/weather-hindustan-airtel-november2015-runners-marathon-morning_51aa3d62-98ed-11e6-98f6-96638e85be2b.jpg" alt="Full marathon">
-      <p></p>
-    </li>
-
-
-
-  </ul>
+    <h2>Running Distances</h2>
+    <ul>
+        <li class="distance">
+            <h2>1km Run</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Runners_JFK_Memorial_%28cropped%29.jpg" alt="1km Run">
+            <p>This short and sweet 1km run...</p>
+        </li>
+        <li class="distance">
+            <h2>5km Run</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Running_Man_Kyle_Cassidy.jpg" alt="5km Run">
+            <p>With a distance of 5km...</p>
+        </li>
+        <li class="distance">
+            <h2>10km Run</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Runners_JFK_Memorial_%28cropped%29.jpg" alt="10km Run">
+            <p>The 10km run...</p>
+        </li>
+        <li class="distance">
+            <h2>Half Marathon</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Running_Man_Kyle_Cassidy.jpg" alt="Half Marathon">
+            <p>The half marathon...</p>
+        </li>
+        <li class="distance">
+            <h2>Full Marathon</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Runners_JFK_Memorial_%28cropped%29.jpg" alt="Full Marathon">
+            <p>The full marathon...</p>
+        </li>
+    </ul>
 </div>
 </body>
 </html>
